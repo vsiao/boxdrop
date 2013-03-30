@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boxdrop Dropdrop</title>
+  <title>Master Hand in Dropbox Land</title>
+  <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  body {
+    background: #eee;
+    font-family: Monda, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .container {
+    width: 300px;
+    border: 5px solid #f00;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px 10px;
+  }
+  a.login {
+    color: #0b61a4;
+    text-decoration: none;
+  }
+  a.login:hover {
+    text-decoration: underline;
+  }
+  </style>
 </head>
 <body>
-Click <a href="{{ dropbox_login_url }}">here</a> to login with Dropbox.
+<h1>Master Hand in Dropbox Land</h1>
+<div class="container">
+  <img src="/static/stophand.gif" /><br />
+  <span style="color:#f00;font-weight:700;font-size:36px">STOP!</span><br />
+  <a href="{{ dropbox_login_url }}" class="login">Login with Dropbox</a>
+</div>
 </body>
 </html>
