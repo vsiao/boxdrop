@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boxdrop Dropdrop</title>
+</head>
+<body>
+Click <a href="{{ dropbox_logout_url }}">here</a> to logout.<br />
+<a href="/drop">Drop</a>!
+<ul id="fileList">
+</ul>
+<script type="text/javascript">
+var metadata = {{ root_data|tojson|safe }};
+var file_list = document.getElementById('fileList');
+var i, li;
+for (i = 0; i < metadata.contents.length; ++i) {
+  li = document.createElement('li');
+  li.textContent = metadata.contents[i].path;
+  file_list.appendChild(li);
+}
+</script>
+</body>
+</html>
