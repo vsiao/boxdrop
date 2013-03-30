@@ -3,6 +3,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask.ext.dropbox import Dropbox
 import json
+import os
 import settings
 
 app = Flask(__name__, template_folder='views')
@@ -35,4 +36,5 @@ def drop(path):
     return json.dumps({'status': 'success', 'data': data})
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
